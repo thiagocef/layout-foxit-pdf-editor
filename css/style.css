@@ -1,0 +1,437 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Inconsolata:wght@200;400&family=Nunito:ital,wght@0,200;0,400;0,700;1,400&family=Schoolbell&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+ --cor00: #f7f7f7;
+ --cor01: #c42157;
+ --cor02: #ff9c08;
+ --cor03: #a80fa8;
+ --cor04: #f0f0c7;
+ --cor05: #5c5c5c;
+}
+body {
+    background-color: #a8a88b;
+}
+a {
+    text-decoration: none;
+    color: var(--cor05);
+}
+ul, li {
+    list-style: none;
+}
+/*=============== HEADER ================*/
+header {
+    background-color: var(--cor04);
+    color: var(--cor05);
+    box-shadow: 2px 2px 2px #00000010;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 15px;
+}
+@media (max-width: 1072px) {
+    header {
+        justify-content: none;
+        padding-right: 0;
+    }
+}
+
+/* @media (max-width: 836px) {
+    header {
+        justify-content: space-between;
+    }
+} */
+
+
+@media (max-width: 841px) {
+    .nav-list {
+        display: none;
+    }    
+}
+
+/*=================== MENU HAMBURGUER ======================*/
+.menu-hamburguer {
+    display: none;
+}
+@media (max-width: 841px) {
+    .menu-hamburguer {
+        background-color: var(--cor04);
+        display: block;
+        padding: 3px 0;
+    }    
+    .menu-hamburguer:hover {
+        cursor: pointer;
+    }
+}
+@media (max-width: 841px) {
+    .menu-hamburguer-item {
+        width: 30px;
+        margin: 5px 0;
+        padding: 2px 0;
+        border-radius: 25px;
+        background-color: var(--cor05);
+    }
+}
+
+/*========================= MENU NAV ==========================*/
+.nav-list ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-list li {
+    font-size: 12PX;
+    padding: 0 7.5px;
+    list-style: none;
+    line-height: 40px;
+}
+
+
+.nav-list li:hover{
+    background-color: #d1d1a9;
+    color: #444444;
+    cursor: default;
+    font-weight: bolder;
+}
+
+/*================ PESQUISAR =================*/
+.pesquisar {
+    display: flex;
+    align-items: center;
+    /* min-width: 80px; */
+}
+@media (max-width: 912px) {
+    .pesquisar {
+        display: none;
+        padding-right: 0;
+    }
+}
+@media (max-width: 1072px) {
+    .pesquisar {
+        margin-right: 50px;
+    }
+}
+@media (max-width: 841px) {
+    .pesquisar {
+        display: flex;
+        margin: 10px;
+    }
+}
+.pesquisar img {
+    width: 20px;
+    margin-right: 5px;
+}
+.pesquisar img:hover {
+    cursor: pointer;
+}
+.pesquisar-campo {
+    padding: 3px 0 3px 15px;
+    margin: 5px 0;
+    max-width: 150px;
+    border: 2px solid #d1d1b0a9;
+    border-radius: 30px;
+}
+@media(max-width: 1142px) {
+    .pesquisar-campo {
+        width: 80px;
+        font-size: 11px;
+    }
+} 
+@media (max-width: 1072px) {
+    .pesquisar-campo {
+        display: none;
+    }
+}
+
+/*=============== MAIN ================*/
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr; /*3 colunas de 1fr cada*/
+    grid-gap: 5px;
+    margin-right: 40px;
+}
+@media (max-width: 841px) {
+    main {
+        grid-template-columns: 1.5fr 1.5fr; /*3 colunas de 1fr cada*/
+        margin-right: 5px;
+    }
+}
+@media (max-width: 558px) {
+    main {
+        display: block;
+    }
+}
+@media (max-width: 514px) {
+    main {
+        padding-right: 0;
+    }
+}
+
+span {
+    text-decoration: underline;
+   
+}
+section {
+    /* border: 1px solid black; */
+    margin: 10px;
+}
+
+/*=============== ARQUIVOS ================*/
+.arquivos {
+    background-color: var(--cor00);
+    color: var(--cor05);
+    grid-row: 1/3; /*o primeiro item pega da linha 1 até a linha 3*/
+    min-width: 180px;
+    padding: 10px 8px;
+}
+@media (max-width: 841px) {
+    .arquivos {
+        display: none;
+        min-width: 120px;
+
+    }
+}
+
+.arquivos-recentes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arquivos-recentes img {
+    width: 18px;
+}
+
+.arquivos-recentes img:hover {
+    cursor: pointer;
+}
+
+.arquivos-recentes:nth-child(1) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 14px;
+}
+
+.arquivos-abrir {
+    margin-top: 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.arquivos-abrir p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.arquivos-abrir img {
+    width: 23px;
+    margin-right: 4px;
+}
+/*=============== FOXIT ================*/
+
+.foxit {
+    grid-column: 2/4; /*vai ocupar a posição da coluna 2 até a 4*/
+    background-color: var(--cor01);
+    color: var(--cor04);
+    padding: 20px 10px 5px 40px;
+    min-width: 590px;
+}
+@media (max-width: 841px) {
+    .foxit {
+        grid-column: 1/3; /*vai ocupar a posição da coluna 1 até a 4*/
+        min-width: 500px;
+    }
+}
+@media (max-width: 542px) {
+    .foxit {
+        min-width: 240px;
+
+    }
+}
+
+
+.foxit-principal h1 {
+    font-style: italic;
+    font-size: 32px;
+}
+
+.foxit-principal p:nth-child(2) {
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+.foxit-principal p:nth-child(3) {
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.foxit-avaliacao {
+    display: flex;
+    align-items: center;
+}
+
+.foxit-avaliacao img {
+    width: 23px;
+    margin-right: 3px;
+}
+.foxit-avaliacao p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+.foxit-avaliacao a {
+    color: var(--cor04);
+    font-weight: bold;
+}
+
+.foxit-avaliacao a:hover {
+    color: rgb(224, 224, 224);
+    font-weight: bold;
+}
+
+.foxit-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 90px 20px 5px 0;
+}
+
+.foxit-botoes div:nth-child(1) {
+    background-color: #4444bd;
+    padding: 12px 30px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+.foxit-botoes div:nth-child(1):hover {
+    color: rgb(196, 196, 196);
+    cursor: pointer;
+}
+@media (max-width: 591px) {
+    .foxit-botoes div:nth-child(1) {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+}
+@media (max-width: 514px) {
+    .foxit-botoes div:nth-child(1) {
+        font-size: 11px;
+    }
+}
+.foxit-botoes div:nth-child(2) {
+    background-color: var(--cor00);
+    color: #4444bd;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 30px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+}
+@media (max-width: 591px) {
+    .foxit-botoes div:nth-child(2) {
+        font-size: 12px;
+        padding: 10px 20px;
+
+    }
+}
+@media (max-width: 514px) {
+    .foxit-botoes div:nth-child(2) {
+        font-size: 11px;
+    }
+}
+.foxit-botoes div:nth-child(2):hover {
+    color: #7979ee;
+    cursor: pointer;
+}
+/*=============== FERRAMENTAS ================*/
+
+.ferramentas {
+    background-color: var(--cor02);
+    color: var(--cor04);
+    padding: 30px 25px 30px 40px;
+}
+
+.ferramentas strong {
+    font-style: italic;
+}
+
+.ferramentas > p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+    margin-bottom: 25px;
+}
+
+.ferramentas-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*duas colunas*/
+    grid-gap: 25px;
+}
+
+.ferramentas-itens p {
+    font-size: 14px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid white;
+}
+
+.ferramentas-itens p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.ferramentas-itens p:nth-child(5) {
+    border: none;
+}
+/*=============== GERENCIAMENTO ================*/
+
+.gerenciamento {
+    background-color: var(--cor03);
+    color: var(--cor04);
+    padding: 30px 25px 30px 20px;
+}
+
+.gerenciamento > p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-bottom: 14px;
+}
+
+.gerenciamento strong {
+    font-style: italic;
+}
+
+.gerenciamento p:nth-child(2) {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.gerenciamento p:nth-child(3) {
+    width: 200px;
+    border: 1px solid white;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px;
+}
+.gerenciamento p:nth-child(3):hover {
+    border: 1px solid #e0e0e0;
+    color: #e0e0e0;
+    cursor: pointer;
+}
